@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+.tictactoe_main_container {
+    margin: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+}
+
+.cell {
+    /* border: 1px solid black; */
+    width: 13rem;
+    height: 13rem;
+    transition: all 0.1s ease;
+    font-family: "Shantell Sans", cursive;
+    display: grid;
+    place-items: center;
+    font-size: 8rem;
+}
+
+
+.mid_cell {
+    border: 1px solid black;
+}
+
+.cell[data-index='0'], .cell[data-index="3"], .cell[data-index="6"],
+.cell[data-index="7"],
+.cell[data-index="1"] {
+    border-right: 1px solid black;
+}
+
+.cell[data-index='7'],
+.cell[data-index="8"],
+.cell[data-index="5"],
+.cell[data-index="2"],
+.cell[data-index="1"] {
+    border-left: 1px solid black;
+}
+
+.cell[data-index='1'],
+.cell[data-index="2"],
+.cell[data-index="3"],
+.cell[data-index="4"],
+.cell[data-index="5"], 
+.cell[data-index="0"] {
+    border-bottom: 1px solid black;
+}
+
+.cell[data-index='3'],
+.cell[data-index="5"],
+.cell[data-index="6"],
+.cell[data-index="8"],
+.cell[data-index="7"] {
+    border-top: 1px solid black;
+}
+
+
+.cell:hover {
+    scale: 1.02;
+}
+
+#reset {
+    width: 16rem;
+    height: 4rem;
+    margin-top: 5%;
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 4rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+
+#reset:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+#message_box {
+    position: absolute;
+    width: 60vw;
+    height: 30vh;
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    top: 38%;
+    font-size: 4rem;
+    display: none;
+    text-align: center;
+    color: white;
+}
