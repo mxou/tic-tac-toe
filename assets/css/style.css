@@ -123,3 +123,29 @@
     text-align: center;
     color: white;
 }
+
+
+
+@media screen and (max-width:660px) {
+    .cell {
+        width: 9rem;
+        height: 9rem;
+        font-size: 8rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .cell {
+        width: 6rem;
+        height: 6rem;
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .cell {
+        width: 5rem;
+        height: 5rem;
+        font-size: 2rem;
+    }
+}
